@@ -22,7 +22,7 @@ def create_vmat_files(directory, relative_path_prefix, lighting_choice):
 
 # Global templates with placeholder for relative_path
 lit = """Layer0
-{{
+{
     shader "vr_standard.vfx"
 
     //---- Color ----
@@ -39,11 +39,11 @@ lit = """Layer0
 
     //---- Normal Map ----
     TextureNormal "materials/default/default_normal.tga"
-}}
+}
 """
 
 unlit = """Layer0
-{{
+{
     shader "vr_standard.vfx"
 
     //---- Lighting ----
@@ -55,7 +55,7 @@ unlit = """Layer0
     g_vTexCoordScale "[1.000 1.000]"
     g_vTexCoordScrollSpeed "[0.000 0.000]"
     TextureColor "{relative_path}"
-}}
+}
 """
 
 # Get inputs from user
